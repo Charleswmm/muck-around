@@ -2,14 +2,21 @@
   "name": "muck-around",
   "version": "1.0.0",
   "description": "A copy of a website for learning",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "nil",
+  "main": "src/js/app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Charleswmm/muck-around.git"
   },
   "devDependencies": {
-    "webpack": "^4.42.1"
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "webpack -p",
+    "watch": "webpack -p --watch"
   }
 }
