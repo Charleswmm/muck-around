@@ -2,7 +2,7 @@ version: '3'
 
 services:
   website:
-    container_name: website
+    container_name: ${CONTAINER_NAME}
     image: nginx:latest
     volumes:
       - ${FRONT_END_FOLDER}:/usr/share/nginx/html:ro
