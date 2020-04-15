@@ -1,0 +1,56 @@
+/* My Css entries */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-width: 1000px;
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.page-wrapper {
+    height: 100%;
+}
+
+.page-nav {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 72px;
+    padding: 8px 30px 8px 30px;
+    display: flex;
+}
+
+.nav-column ul {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.nav-column ul li {
+    color: white;
+    list-style: none;
+}
+
+.logo {
+    background-image: url("../assets/dis-logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 36px;
+    width:33px;
+    display: inline-block;
+}
+
+.discord {
+    background-image: url("../assets/discord.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 36px;
+    width: 98px;
+    display: inline-block;
+}
+
+.main-wrapper {
+    background-image: linear-gradient(180deg,#7c75ee,#e767eb 75%);
+    height: 100%;
+}
