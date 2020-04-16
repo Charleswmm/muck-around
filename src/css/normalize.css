@@ -366,3 +366,9 @@ template {
 [hidden] {
   display: none;
 }
+
+/* My additions to normalize.css */
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
