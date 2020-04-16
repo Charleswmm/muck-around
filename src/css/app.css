@@ -27,8 +27,6 @@ h2 {
 }
 
 .page-nav {
-    position: absolute;
-    z-index: 5;
     width: 100%;
     padding: 0 30px;
     height: 56px;
