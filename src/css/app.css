@@ -4,76 +4,73 @@ html, body {
     height: 100%;
 }
 
-body {
+.page-nitro {
     min-width: 1000px;
     font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-h2 {
-    color: white;
-    font-size: 26px;
-    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-weight: normal;
-}
-
-.page-wrapper {
+.page-top {
     background-image: linear-gradient(180deg,#7c75ee,#e767eb 75%);
     height: 100%;
+    width: 100%;
 }
 
-.nav-wrapper {
+.nav {
+    width:100%;
     height: 56px;
     padding: 8px 0;
 }
 
-.page-nav {
-    width: 100%;
+.nav-content {
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 0 30px;
     height: 56px;
     display: flex;
-    box-sizing: border-box;
 }
 
-.grow-column {
-    flex-grow: 1;
-    min-width: 12px;
-}
-
-.nav-column {
+.nav-content-column {
     display: flex;
     align-items:center;
     flex-shrink: 0;
 }
 
-.nav-column ul {
+.nav-list {
     display: flex;
     flex: 0 0 auto;
     list-style: none;
+    height: 16px;
 }
 
-.nav-column ul li {
-    color: white;
+.nav-list-item {
     flex: 0 0 auto;
-    font-size: 14px;
     padding: 0 10px;
     text-align: center;
     height: 16px;
+}
+
+.nav-list-link {
+    margin-right: 8px;
+}
+
+.nav-list-menu {
+    cursor: default;
+}
+
+.nav-list-skin:hover {
+    opacity: 100%;
+}
+
+.nav-list-skin {
+    font-size: 14px;
+    color: white;
     opacity: 80%;
     transition: opacity .125s;
 }
 
-.nav-column ul li a {
-    color: white;
-    opacity: 80%;
-}
-
-.nav-column ul li:hover {
-    opacity: 100%;
-}
-
-.nav-column ul li a span {
-    margin-right: 8px;
-    font-size: 14px;
+.flex-grow {
+    flex-grow: 1;
+    min-width: 12px;
 }
 
 .login{
@@ -82,69 +79,58 @@ h2 {
     border-radius: 20px;
 }
 
-.logo {
-    background-image: url("../assets/dis-logo.svg");
+.svg {
     background-repeat: no-repeat;
     background-size: contain;
-    height: 36px;
-    width:33px;
     display: inline-block;
 }
 
-.discord {
+.svg-logo {
+    background-image: url("../assets/dis-logo.svg");
+    height: 36px;
+    width:33px;
+}
+
+.svg-discord {
     background-image: url("../assets/discord.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 36px;
     width: 98px;
-    display: inline-block;
     margin-right: 12px;
 }
 
-.twitter {
+.svg-twitter {
     background-image: url("../assets/twitter.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 16px;
     width: 16px;
-    display: inline-block;
 }
 
-.facebook {
+.svg-facebook {
     background-image: url("../assets/facebook.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 16px;
     width: 16px;
-    display: inline-block;
 }
 
-.instagram {
+.svg-instagram {
     background-image: url("../assets/instagram.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 16px;
     width: 16px;
-    display: inline-block;
 }
 
-.arrow {
+.svg-arrow {
     background-image: url("../assets/arrow.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 5px;
     width: 7px;
     margin-bottom: 1px;
-    display: inline-block;
 }
 
-.locale {
+.svg-arrow-mid {
+    padding-bottom: 6px;
+}
+
+.svg-locale {
     background-image: url("../assets/locale.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     height: 20px;
     width: 22px;
-    display: inline-block;
 }
 
 .divider {
@@ -155,18 +141,27 @@ h2 {
     display: inline-block;
 }
 
-.main-wrapper {
-    display: flex;
+.hero {
     width: 100%;
-}
-
-.page-block1 {
     padding: 130px 0 350px;
-    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.page-block1-content {
+.hero-content {
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 0 40px;
+    flex: 1 1 auto;
+}
+
+.hero-wave {
+    background-image: url("../assets/wave.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    flex: 1 1 auto;
 }
 
 .discord-big {
@@ -186,7 +181,7 @@ h2 {
     background-size: contain;
     position: relative;
     top: -15px;
-    left: 0px;
+    left: 0;
     height: 68px;
     width: 248px;
 }
@@ -194,17 +189,40 @@ h2 {
 .subheading {
     max-width: 620px;
     margin-bottom: 20px;
+    color: white;
+    font-size: 26px;
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: normal;
 }
 
-.purchase-button {
+.btn {
+    height: 44px;
     min-width: 165px;
     box-shadow: 0 10px 20px rgba(32,34,37,.3);
     background-color: black;
-    font-size: 14px;
-    color: white;
-    height: 44px;
     border: none;
     cursor: pointer;
     border-radius: 3px;
+    box-sizing: content-box;
+}
 
+.btn-skin {
+    font-size: 14px;
+    color: white;
+}
+
+.btn-gutter {
+    margin-right: 20px;
+}
+
+.btn-span-border {
+    border: 1px solid hsla(0,0%,100%,.3);
+    border-radius: 3px;
+    padding: 2px;
+    line-height: 1;
+    margin-left: 6px;
+}
+
+.btn-flex {
+    display: flex;
 }
