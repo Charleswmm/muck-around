@@ -2,6 +2,7 @@
 
 html, body {
     height: 100%;
+    font-size: 62.5%;
 }
 
 .page-nitro {
@@ -9,7 +10,7 @@ html, body {
     font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.page-wrapper {
+.page-top {
     background-image: linear-gradient(180deg,#7c75ee,#e767eb 75%);
     height: 100%;
     width: 100%;
@@ -39,22 +40,54 @@ html, body {
     display: flex;
     flex: 0 0 auto;
     list-style: none;
-    height: 16px;
 }
 
 .nav-list-item {
     flex: 0 0 auto;
-    padding: 0 10px;
-    text-align: center;
+    padding: 10px;
     height: 16px;
 }
 
-.nav-list-link {
+.nav-list-margin {
     margin-right: 8px;
 }
 
 .nav-list-menu {
     cursor: default;
+    position: relative;
+}
+
+.gone {
+    visibility: hidden;
+}
+
+.dropdown {
+    pointer-events: none;
+    list-style: none;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    overflow: hidden;
+    min-width: 118px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 4px 4px;
+    position: absolute;
+    top:30px;
+    left:0;
+}
+
+.dropdown-list span {
+    font-size: 1.2rem;
+    color: #9099a4;
+    padding: 7px 14px;
+    display: block;
+    border-radius: 3px;
+    transition: color .125s, background-color .125s;
+}
+
+.dropdown-list span:hover {
+    color: #18191c;
+    background-color: gainsboro;
 }
 
 .nav-list-skin:hover {
@@ -62,7 +95,7 @@ html, body {
 }
 
 .nav-list-skin {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: white;
     opacity: 80%;
     transition: opacity .125s;
@@ -192,6 +225,10 @@ html, body {
     border: none;
     cursor: pointer;
     border-radius: 3px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 .btn-skin {
