@@ -6,12 +6,20 @@ import 'svg-url-loader?iesafe!../assets/discord.svg';
 console.log("Welcome! Greetings from app.js");
 
 document.addEventListener('DOMContentLoaded', function () {
-  let develop = document.querySelector('#develop');
+  const menu_item = document.querySelectorAll('.nav-list-menu');
 
-  develop.addEventListener('mouseenter', function () {
-    develop.lastElementChild.classList.add('gone');
-  });
-  develop.addEventListener('mouseleave', function () {
-    develop.lastElementChild.classList.remove('gone');
+  menu_item.forEach((e) => {
+    const dropdown = e.lastElementChild;
+
+    e.addEventListener('mouseenter', function (o) {
+      dropdown.classList.add('show');
+      dropdown.classList.remove('gone');
+    });
+
+    e.addEventListener('mouseleave', function (o) {
+      dropdown.classList.add('gone');
+      dropdown.classList.remove('show');
+    });
+
   });
 });

@@ -58,11 +58,18 @@ html, body {
 }
 
 .gone {
+    opacity: 0;
     visibility: hidden;
+    transform: scale(.9) translateY(-20px);
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0px);
 }
 
 .dropdown {
-    pointer-events: none;
     list-style: none;
     text-align: left;
     box-shadow: 0 1px 3px rgba(0,0,0,.1);
@@ -72,11 +79,13 @@ html, body {
     border-radius: 4px;
     padding: 4px 4px;
     position: absolute;
-    top:30px;
+    top:40px;
     left:0;
+    transition: opacity .125s,transform .125s,visibility .125s;
 }
 
 .dropdown-list span {
+    cursor: pointer;
     font-size: 1.2rem;
     color: #9099a4;
     padding: 7px 14px;
@@ -106,7 +115,7 @@ html, body {
     min-width: 12px;
 }
 
-.login{
+.login {
     padding:5px 17px 7px;
     border: 2px solid hsla(0,0%,100%,.8);
     border-radius: 20px;
@@ -186,6 +195,10 @@ html, body {
     padding: 0 40px;
 }
 
+.hero-align {
+    width: 250px;
+}
+
 .svg-discord-big {
     background-image: url("../assets/discord.svg");
     background-repeat: no-repeat;
@@ -210,21 +223,29 @@ html, body {
 
 .subheading-h2 {
     max-width: 620px;
-    margin-bottom: 20px;
     color: white;
-    font-size: 26px;
+    font-size: 2.5rem;
     font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: normal;
 }
 
 .btn {
     height: 44px;
-    min-width: 165px;
-    box-shadow: 0 10px 20px rgba(32,34,37,.3);
-    background-color: black;
+    max-width: 165px;
     border: none;
     cursor: pointer;
     border-radius: 3px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.btn-green {
+    background-color: #43b581;;
+}
+
+.btn-black {
+    box-shadow: 0 10px 20px rgba(32,34,37,.3);
+    background-color: black;
 }
 
 .btn:hover {
@@ -232,7 +253,7 @@ html, body {
 }
 
 .btn-skin {
-    font-size: 14px;
+    font-size: 1.3rem;
     color: white;
 }
 
@@ -250,6 +271,13 @@ html, body {
 
 .btn-flex {
     display: flex;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.btn-align {
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .wave {
@@ -263,9 +291,41 @@ html, body {
     box-sizing: border-box;
 }
 
+.hash-svg {
+    background-image: url("../assets/hash.svg");
+}
+
+.gif-svg {
+    background-image: url("../assets/gif.svg");
+}
+
+.stream-svg {
+    background-image: url("../assets/comp.svg");
+}
+
+.vid-svg {
+    background-image: url("../assets/screen.svg");
+}
+
+.globe-svg {
+    background-image: url("../assets/globe.svg");
+}
+
+.up-svg {
+    background-image: url("../assets/up.svg");
+}
+
+.diamond-svg {
+    background-image: url("../assets/diamond.svg");
+}
+
+.wheel-svg {
+    background-image: url("../assets/wheel.svg");
+}
+
 .mid {
     width: 100%;
-    padding-bottom: 60px;
+    padding-top: 100px;
     background-color: #18191c;
 }
 
@@ -274,39 +334,112 @@ html, body {
     margin: 0 auto;
     padding: 0 40px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: hidden;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    box-sizing: border-box;
 }
 
 .subheading-h3 {
-    grid-column: 1 / span 3;
+    grid-column: 1 / 4;
+    font-size: 2.4rem;
+    color: white;
+    text-align: center;
 }
 
 .perk {
-
+    padding: 30px;
+    flex: 1 1 160px;
 }
 
 .perk-svg {
-    background-image: url("../assets/hash.svg");
     height: 40px;
     width: 40px;
-
+    margin-bottom: 20px;
 }
 
 .perk-subheading {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 2.4rem;
     margin-bottom: 10px;
     color: white;
 }
 
 .perk-para {
     color: #b9bbbe;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 1.5rem;
     line-height: 1.3;
 }
 
 .doit {
+    grid-column: 1 / span 3;
+    font-size: 5rem;
+    margin-bottom: 46px;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    font-weight: 700;
+}
+
+.page-bot {
+    width: 100%;
+    background-color: #7289da;
+}
+
+.wave-bot {
+    transform: rotate(180deg);
+    background-position: 0 5px;
 
 }
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1080px) {
+    .svg-discord {
+        visibility: hidden;
+        width: 0;
+    }
+    .svg-responsive {
+        visibility: hidden;
+        width: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .subheading-h2 {
+        max-width: 420px;
+    }
+    .page-nitro {
+        min-width: 868px;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .nav {
+        display:none;
+    }
+    .page-nitro {
+        min-width: 320px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .subheading-h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .btn-flex {
+        justify-content: center;
+    }
+    .hero-align {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .btn {
+        max-width: 300px;
+        min-width: 165px;
+    }
+}
+
