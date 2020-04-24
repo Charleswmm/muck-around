@@ -16,6 +16,52 @@ html, body {
     width: 100%;
 }
 
+.nav-mobile {
+    width: 100%;
+    display: none;
+    height: 32px;
+    padding: 4px 0;
+    box-sizing: content-box;
+}
+
+.nav-mobile-content {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-mobile-home {
+    flex: 1 1 auto;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-mobile-logo {
+    background-image: url("../assets/dis-logo.svg");
+    height: 24px;
+    width: 22px;
+}
+
+.nav-mobile-discord {
+    background-image: url("../assets/discord.svg");
+    height: 24px;
+    width: 80px;
+}
+
+.nav-mobile-burger {
+    height: 24px;
+    width: 20px;
+    flex: 0 0 auto;
+}
+
+.burger-animation {
+    width: 10px;
+    height: 10px;
+    background-color: #18191c;
+}
+
 .nav {
     width:100%;
     height: 56px;
@@ -57,19 +103,7 @@ html, body {
     position: relative;
 }
 
-.gone {
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(.9) translateY(-20px);
-}
-
-.show {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1) translateY(0px);
-}
-
-.dropdown {
+.nav-list-menu .dropdown {
     list-style: none;
     text-align: left;
     box-shadow: 0 1px 3px rgba(0,0,0,.1);
@@ -82,6 +116,15 @@ html, body {
     top:40px;
     left:0;
     transition: opacity .125s,transform .125s,visibility .125s;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(.9) translateY(-20px);
+}
+
+.nav-list-menu .dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0px);
 }
 
 .dropdown-list span {
@@ -195,6 +238,12 @@ html, body {
     padding: 0 40px;
 }
 
+.nitro-dude {
+    width: 200px;
+    height: auto;
+    display: none;
+}
+
 .hero-align {
     width: 250px;
 }
@@ -271,7 +320,6 @@ html, body {
 
 .btn-flex {
     display: flex;
-    max-width: 800px;
     flex-wrap: wrap;
 }
 
@@ -287,8 +335,8 @@ html, body {
     width: 100%;
     height: 0;
     padding-top: 18.48958%;
-    margin: 0 -2px -2px 0;
     box-sizing: border-box;
+    background-position: 0 2px;
 }
 
 .hash-svg {
@@ -332,14 +380,16 @@ html, body {
 .mid-content {
     max-width: 1020px;
     margin: 0 auto;
-    padding: 0 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    padding: 0 40px 50px;
     box-sizing: border-box;
 }
 
+.mid-content-perk {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
 .subheading-h3 {
-    grid-column: 1 / 4;
     font-size: 2.4rem;
     color: white;
     text-align: center;
@@ -357,7 +407,7 @@ html, body {
 }
 
 .perk-subheading {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     margin-bottom: 10px;
     color: white;
 }
@@ -369,13 +419,12 @@ html, body {
 }
 
 .doit {
-    grid-column: 1 / span 3;
     font-size: 5rem;
-    margin-bottom: 46px;
     color: white;
     text-align: center;
-    padding: 100px 0;
+    padding: 80px 0 0;
     font-weight: 700;
+    overflow-wrap: break-word;
 }
 
 .page-bot {
@@ -385,7 +434,7 @@ html, body {
 
 .wave-bot {
     transform: rotate(180deg);
-    background-position: 0 5px;
+    background-position: 0 2px;
 
 }
 
@@ -417,6 +466,9 @@ html, body {
     .nav {
         display:none;
     }
+    .nav-mobile {
+        display: block;
+    }
     .page-nitro {
         min-width: 320px;
     }
@@ -434,12 +486,22 @@ html, body {
         margin-left: auto;
         margin-right: auto;
     }
+    .perk {
+        padding: 10px;
+    }
+    .subheading-h3 {
+        padding-bottom: 10px;
+    }
+    .nitro-dude {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 420px) {
     .btn {
         max-width: 300px;
         min-width: 165px;
+        margin-right: 20px;
     }
 }
 

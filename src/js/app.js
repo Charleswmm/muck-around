@@ -1,24 +1,20 @@
 import '../css/normalize.css';
 import '../css/app.css';
-import 'svg-url-loader?iesafe!../assets/dis-logo.svg';
-import 'svg-url-loader?iesafe!../assets/discord.svg';
 
 console.log("Welcome! Greetings from app.js");
 
 document.addEventListener('DOMContentLoaded', function () {
   const menu_item = document.querySelectorAll('.nav-list-menu');
 
-  menu_item.forEach((e) => {
-    const dropdown = e.lastElementChild;
+  menu_item.forEach((item) => {
+    const dropdown = item.lastElementChild;
 
-    e.addEventListener('mouseenter', function (o) {
-      dropdown.classList.add('show');
-      dropdown.classList.remove('gone');
+    item.addEventListener('mouseenter', function () {
+      dropdown.classList.add('active');
     });
 
-    e.addEventListener('mouseleave', function (o) {
-      dropdown.classList.add('gone');
-      dropdown.classList.remove('show');
+    item.addEventListener('mouseleave', function () {
+      dropdown.classList.remove('active');
     });
 
   });
