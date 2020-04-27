@@ -3,107 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="nav-wrapper">
-            <nav class="page-nav">
-                <div class="nav-column">
-                    <a href="#" class="logo"></a>
-                    <a href="#" class="discord"></a>
-                </div>
-                <div class="nav-column">
-                    <ul>
-                        <li>
-                            <a href="https://discordapp.com/download">
-                                <span>Download</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://discordapp.com/why-discord">
-                                <span>Why Discord?</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://discordapp.com/nitro">
-                                <span>Nitro</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://discordapp.com/jobs">
-                                <span>Jobs</span>
-                            </a>
-                        </li>
-                        <li>
-                            <span>Developers</span>
-                            <span class="arrow"></span>
-                        </li>
-                        <li>
-                            <span>Community</span>
-                            <span class="arrow"></span>
-                        </li>
-                        <li>
-                            <span>Support</span>
-                            <span class="arrow"></span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav-column grow-column"></div>
-                <div class="nav-column">
-                    <ul>
-                        <li>
-                            <a href="http://www.twitter.com/discord" class="twitter">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.facebook.com/discord" class="facebook">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.instagram.com/discord" class="instagram">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://discordapp.com/login" class="login">
-                                Login
-                            </a>
-                        </li>
-                        <li>
-                            <span class="divider"></span>
-                        </li>
-                        <li>
-                            <span class="locale"></span>
-                            <span class="arrow"></span>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="main-wrapper">
-            <div class="page-block1">
-                <div class="page-block1-content">
-                    <div class="discord-big"></div>
-                    <div class="nitro-big"></div>
-                    <div>
-                        <h2 class="subheading">Get an enhanced Discord experience for one low, monthly cost. Customize your profile with a unique tag, access animated emojis, enjoy bigger file uploads, boost your favorite server, and more.</h2>
+    <main class="page-nitro">
+        <div class="page-top">
+            <section class="nav-mobile">
+                <div class="nav-mobile-content">
+                    <div class="nav-mobile-content-home">
+                        <a href="https://discordapp.com/">
+                            <div class="svg nav-mobile-logo"></div>
+                            <div class="svg nav-mobile-discord"></div>
+                        </a>
                     </div>
-                    <div>
-                        <button class="purchase-button">$99.99/Year <span>-16%</span></button>
-                        <button class="purchase-button">$9.99/Month</button>
+                    <div class="nav-mobile-content-burger">
+                        <input type="checkbox" class="burger-toggle"/>
+                        <div class="burger">
+                            <span class="burger-bits"></span>
+                            <span class="burger-bits"></span>
+                            <span class="burger-bits"></span>
+                            <span class="burger-bits"></span>
+                            <span class="burger-bits"></span>
+                            <span class="burger-bits"></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="page-block">
-
-            </div>
-            <div class="page-block">
-
-            </div>
-        </main>
-        <footer>
-
-        </footer>
-    </div>
+            </section>
+            <section class="nav">
+                <div class="nav-content">
+                    <div class="nav-content-column">
+                        <a href="https://discordapp.com/" class="svg svg-logo"></a>
+                        <a href="https://discordapp.com/" class="svg svg-discord"></a>
+                    </div>
+                    <div class="nav-content-column flex-grow">
+                        <ul class="nav-list">
+                            <li class="nav-list-item nav-list-margin">
+                                <a href="https://discordapp.com/download">
+                                    <span class="nav-list-skin">Download</span>
+                                </a>
+                            </li>
+                            <li class="nav-list-item nav-list-margin">
+                                <a href="https://discordapp.com/why-discord">
+                                    <span class="nav-list-skin">Why Discord?</span>
+                                </a>
+                            </li>
+                            <li class="nav-list-item nav-list-margin">
+                                <a href="https://discordapp.com/nitro">
+                                    <span class="nav-list-skin">Nitro</span>
+                                </a>
+                            </li>
+                            <li class="nav-list-item nav-list-margin">
+                                <a href="https://discordapp.com/jobs">
+                                    <span class="nav-list-skin">Jobs</span>
+                                </a>
+                            </li>
+                            <li class="nav-list-item nav-list-menu">
+                                <span class="nav-list-skin">Developers</span>
+                                <span class="svg svg-arrow"></span>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Sell Your Game</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Rich Presence</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Verification</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Developer Portal</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Documentation</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-list-item nav-list-menu">
+                                <span class="nav-list-skin">Community</span>
+                                <span class="svg svg-arrow"></span>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Open Source</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Partners</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>HypeSquad</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Guidelines</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-list-item nav-list-menu">
+                                <span class="nav-list-skin">Support</span>
+                                <span class="svg svg-arrow"></span>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Help & Support</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Status</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Parent's Guide</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-list">
+                                            <span>Security</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-content-column">
+                        <ul class="nav-list">
+                            <li class="nav-list-item svg-responsive">
+                                <a href="http://www.twitter.com/discord" class="svg svg-twitter nav-list-skin"></a>
+                            </li>
+                            <li class="nav-list-item svg-responsive">
+                                <a href="http://www.facebook.com/discord" class="svg svg-facebook nav-list-skin"></a>
+                            </li>
+                            <li class="nav-list-item svg-responsive">
+                                <a href="http://www.instagram.com/discord" class="svg svg-instagram nav-list-skin"></a>
+                            </li>
+                            <li class="nav-list-item ">
+                                <a href="https://discordapp.com/login" class="login nav-list-skin">
+                                    <span class="nav-list-skin">Login</span>
+                                </a>
+                            </li>
+                            <li class="nav-list-item">
+                                <span class="divider"></span>
+                            </li>
+                            <li class="nav-list-item nav-list-menu">
+                                <span class="svg svg-locale nav-list-skin"></span>
+                                <span class="svg svg-arrow svg-arrow-mid nav-list-skin"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-align">
+                        <img class="nitro-dude" src="./dist/assets/nitro-dude.png" alt="nitro"/>
+                        <div class="svg-discord-big"></div>
+                        <div class="svg-nitro-big"></div>
+                    </div>
+                    <div>
+                        <h2 class="subheading-h2">Get an enhanced Discord experience for one low, monthly cost. Customize your profile with a unique tag, access animated emojis, enjoy bigger file uploads, boost your favorite server, and more.</h2>
+                    </div>
+                    <div class="btn-flex">
+                        <button class="btn btn-black btn-skin left-btn">$99.99 / Year</button>
+                        <button class="btn btn-black btn-skin">$9.99 / Month</button>
+                    </div>
+                </div>
+            </section>
+            <div class="wave"></div>
+        </div>
+        <div class="page-mid">
+            <section class="mid">
+                <div class="mid-content">
+                    <div class="subheading-h3">Discord Nitro enhances your all-in-one Discord voice, video, and text chat. Check out the perks you'll get:</div>
+                    <div class="mid-content-perk">
+                        <div class="perk">
+                            <div class="svg perk-svg hash-svg"></div>
+                            <div class="perk-subheading">Custom Discord Tag</div>
+                            <div class="perk-para">Choose your tag while you’re subscribed.</div>
+                        </div>
+                        <div class="perk">
+                            <div class="svg perk-svg gif-svg"></div>
+                            <div class="perk-subheading">Animated Fun</div>
+                            <div class="perk-para">Upload GIFs for animated avatars and emojis.</div>
+                        </div>
+                        <div class="perk">
+                            <div class="svg perk-svg stream-svg"></div>
+                            <div class="perk-subheading">Better Go Live Streams</div>
+                            <div class="perk-para">Stream at source with Nitro or at a crisp 1080p 60fps with Nitro Classic.</div>
+                        </div>
+                        <div class="perk">
+                            <div class="svg perk-svg vid-svg"></div>
+                            <div class="perk-subheading">Higher Quality Video</div>
+                            <div class="perk-para">Up your screen share game with 720p 60fps or 1080p 30fps.</div>
+                        </div>
+                        <div class="perk">
+                            <div class="svg perk-svg globe-svg"></div>
+                            <div class="perk-subheading">Global Custom Emojis</div>
+                            <div class="perk-para">Get a global passport to use your custom emojis anywhere.</div>
+                        </div>
+                        <div class="perk">
+                            <div class="svg perk-svg up-svg"></div>
+                            <div class="perk-subheading">Upgraded Upload Limit</div>
+                            <div class="perk-para">Larger upload file size from 8MB to 100MB with Nitro or 50MB with Nitro Classic.</div>
+                        </div>
+                        <div class="perk">
+                            <div class="svg perk-svg diamond-svg"></div>
+                            <div class="perk-subheading">Server Boosting</div>
+                            <div class="perk-para">Boost your favorite server to unlock exclusive perks and a neat badge.</div>
+                        </div>
+                        <div class="perk">
+                            <div class="svg perk-svg wheel-svg"></div>
+                            <div class="perk-subheading">Rep Your Support</div>
+                            <div class="perk-para">Display how long you’ve supported Discord with a special profile badge.</div>
+                        </div>
+                    </div>
+                    <div class="doit">Doitdoitdoitdoitdoitdoit</div>
+                    <div class="btn-flex btn-align">
+                        <button class="btn btn-green btn-skin left-btn">$99.99 / Year</button>
+                        <button class="btn btn-green btn-skin">$9.99 / Month</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="page-bot">
+            <section class="bot">
+                <div class="bot-content"></div>
+                <div class="wave wave-bot"></div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
