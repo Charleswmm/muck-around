@@ -46,12 +46,16 @@ html, body {
     background-image: url("../assets/dis-logo.svg");
     height: 24px;
     width: 22px;
+    position: relative;
+    z-index: 100;
 }
 
 .nav-mobile-discord {
     background-image: url("../assets/discord.svg");
     height: 24px;
     width: 80px;
+    position: relative;
+    z-index: 100;
 }
 
 .nav-mobile-content-burger {
@@ -70,7 +74,7 @@ html, body {
     position: absolute;
     top: -11px;
     left: -19px;
-    z-index: 1;
+    z-index: 100;
 }
 
 .burger span:nth-child(odd) {
@@ -99,14 +103,12 @@ html, body {
     transform: rotate(45deg);
     left: 4px;
     top: 7px;
-    width: 31px;
 }
 
 .burger-toggle:checked + .burger span:nth-child(2) {
     transform: rotate(-45deg);
     left: 26px;
     top: 7px;
-    width: 31px;
 }
 
 .burger-toggle:checked + .burger span:nth-child(3) {
@@ -123,19 +125,17 @@ html, body {
     transform: rotate(-45deg);
     left: 4px;
     top: 29px;
-    width: 31px;
 }
 
 .burger-toggle:checked + .burger span:nth-child(6) {
     transform: rotate(45deg);
     left: 26px;
     top: 29px;
-    width: 31px;
 }
 
 .burger-bits {
     height: 9px;
-    width: 30px;
+    width: 31px;
     background: white;
     position: absolute;
     transition: all 0.25s;
@@ -151,6 +151,57 @@ html, body {
     cursor: pointer;
     opacity: 0;
 }
+
+/* Mobile Navigation Menu */
+
+.mobile-menu {
+    width: 100vw;
+    position: absolute;
+    right: -10px;
+    top: -8px;
+    background-color: black;
+    z-index: 1;
+    padding-top: 40px;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.2s;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-menu-list-item {
+    border-radius: 2px;
+    border-top: 1px solid rgba(79,84,92,.4);
+}
+
+.mobile-menu-list-item a span, .mobile-menu-list-item span:first-child {
+    padding: 17px 10px;
+    display: block;
+}
+
+.drop-arrow::after {
+    content: '';
+    background-image: url("../assets/arrow.svg");
+    height: 5px;
+    width: 7px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 1px;
+}
+
+/* Mobile Navigation Menu Animation */
+
+.burger-toggle:checked ~ .mobile-menu {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+/* Desktop Navigation Bar */
 
 .nav {
     width:100%;
@@ -232,11 +283,11 @@ html, body {
     background-color: gainsboro;
 }
 
-.nav-list-skin:hover {
+.skin-nav-list:hover {
     opacity: 100%;
 }
 
-.nav-list-skin {
+.skin-nav-list {
     font-size: 1.4rem;
     color: white;
     opacity: 80%;
@@ -295,9 +346,6 @@ html, body {
     height: 5px;
     width: 7px;
     margin-bottom: 1px;
-}
-
-.svg-arrow-mid {
     padding-bottom: 6px;
 }
 
