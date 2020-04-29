@@ -194,6 +194,14 @@ html, body {
     margin-bottom: 1px;
 }
 
+.mobile-menu-list-item.drop-arrow {
+    padding: 15px 10px;
+}
+
+.mobile-menu-list-item.drop-arrow::after {
+    margin-bottom: 7px;
+}
+
 /* Mobile Navigation Menu Animation */
 
 .burger-toggle:checked ~ .mobile-menu {
@@ -595,6 +603,7 @@ html, body {
     }
     .subheading-h2 {
         max-width: 420px;
+        text-align: center;
     }
     .page-nitro {
         min-width: 868px;
