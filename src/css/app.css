@@ -175,9 +175,11 @@ html, body {
 .mobile-menu-list-item {
     border-radius: 2px;
     border-top: 1px solid rgba(79,84,92,.4);
+    position: relative;
+    z-index: 2;
 }
 
-.mobile-menu-list-item a span, .mobile-menu-list-item span:first-child {
+.mobile-menu-list-item a span, .mobile-menu-list-item span.skin-nav-list.drop-arrow {
     padding: 17px 10px;
     display: block;
 }
@@ -200,6 +202,46 @@ html, body {
 
 .mobile-menu-list-item.drop-arrow::after {
     margin-bottom: 7px;
+}
+
+.mobile-dropdown-toggle {
+    opacity: 0;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 100vw;
+    height: 48px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.mobile-dropdown-toggle:hover ~ span.skin-nav-list.drop-arrow {
+    opacity: 1;
+}
+
+.mobile-dropdown-toggle:checked ~ ul.mobile-dropdown {
+    display: block;
+}
+
+.mobile-dropdown {
+    display: none;
+    list-style: none;
+}
+
+.mobile-dropdown-list span {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.8);
+    opacity: 1;
+    background-color: #18191c;
+    border-radius: 2px;
+    border-top: 1px solid rgba(79,84,92,.2);
+    transition: background-color .2s,color .2s;
+}
+
+.mobile-dropdown-list span:hover {
+    background-color: #202225;
+    color: rgba(255,255,255,1);
 }
 
 /* Mobile Navigation Menu Animation */
