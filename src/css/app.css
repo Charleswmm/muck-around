@@ -526,6 +526,7 @@ html, body {
     height: 0;
     padding-top: 18.48958%;
     box-sizing: border-box;
+    margin-left: -1px;
 }
 
 .hash-svg {
@@ -664,7 +665,7 @@ html, body {
 }
 
 .footer-content-wrap {
-    margin: 0 auto;
+    margin: 0 auto 34px;
     max-width: 1600px;
 }
 
@@ -703,6 +704,38 @@ html, body {
     height: 100%;
     width: 31px;
     margin-top: 0.4rem;
+}
+
+.footer-content-bot {
+    border-radius: 2px;
+    border-top: 1px solid rgba(79,84,92,.4);
+    padding: 34px 0 0;
+    display: flex;
+}
+
+.footer-content-subheading {
+    flex: 1 0 auto;
+}
+
+.subheading-bot-h2 {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.subheading-bot-h3 {
+    font-size: 1.3rem;
+    color: hsla(0,0%,100%,.6);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.btn-bot {
+    background-color: #7289da;
+    color: #fff;
+    font-size: 1.4rem;
+    max-width: 114px;
+    margin: 0;
+    line-height: 0;
 }
 
 /* Media Queries */
@@ -757,6 +790,19 @@ html, body {
     .footer-logo {
         height: 46px;
         width: 46px;
+    }
+    .subheading-bot-h2, .subheading-bot-h3 {
+        text-align: center;
+    }
+    .btn-bot {
+        align-self: center;
+        margin-top: 16px;
+        background-color: #fff;
+        color: #7289da;
+        padding: 16px;
+    }
+    .footer-content-bot {
+        flex-direction: column;
     }
 }
 
