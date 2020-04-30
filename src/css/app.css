@@ -286,7 +286,7 @@ html, body {
 }
 
 .nav-list-margin {
-    margin-right: 8px;
+    margin-right: 5px;
 }
 
 .nav-list-menu {
@@ -349,7 +349,7 @@ html, body {
 }
 
 .login {
-    padding:5px 17px 7px;
+    padding:5px 14px 7px;
     border: 2px solid hsla(0,0%,100%,.8);
     border-radius: 20px;
 }
@@ -521,12 +521,12 @@ html, body {
 .wave {
     background-image: url("../assets/wave.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 102%;
     width: 100%;
     height: 0;
     padding-top: 18.48958%;
     box-sizing: border-box;
-    background-position: 0 2px;
+    margin-left: -1px;
 }
 
 .hash-svg {
@@ -580,7 +580,7 @@ html, body {
 }
 
 .subheading-h3 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     color: white;
     text-align: center;
 }
@@ -624,11 +624,119 @@ html, body {
 
 .wave-bot {
     transform: rotate(180deg);
-    background-position: 0 2px;
 }
 
+/* Bottom / Footer */
 
+.bot-content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1020px;
+    padding: 40px 50px 80px 250px;
+    box-sizing: border-box;
+}
 
+.svg-discord-classic {
+    background-image: url("../assets/dis-classic.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 109px;
+    width: 200px;
+}
+
+.bot-subheading {
+    font-size: 2.0rem;
+    margin-top: 10px;
+    color: white;
+}
+
+.btn-align-bot {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+
+.footer-content {
+    background-color: #18191c;
+    width: 100%;
+    padding: 80px 160px 48px;
+    box-sizing: border-box;
+}
+
+.footer-content-wrap {
+    margin: 0 auto 34px;
+    max-width: 1600px;
+}
+
+.footer-content-grid {
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) minmax(70px, 1fr) minmax(100px, 1fr) minmax(90px, 1fr) minmax(80px, 1fr) minmax(90px, 0.1fr);
+    column-gap: 10px;
+    row-gap: 30px;
+}
+
+.footer-content-grid ul {
+    list-style: none;
+}
+
+.footer-content-grid ul li:first-child a span {
+    opacity: 0.9;
+}
+
+.footer-content-grid ul li:first-child {
+    margin-bottom: 10px;
+}
+
+.footer-content-grid ul li a span {
+    color: #fff;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    opacity: 0.6;
+}
+
+.footer-content-grid ul li a span:hover {
+    opacity: 0.9;
+}
+
+.footer-logo {
+    background-image: url("../assets/dis-logo.svg");
+    height: 100%;
+    width: 31px;
+    margin-top: 0.4rem;
+}
+
+.footer-content-bot {
+    border-radius: 2px;
+    border-top: 1px solid rgba(79,84,92,.4);
+    padding: 34px 0 0;
+    display: flex;
+}
+
+.footer-content-subheading {
+    flex: 1 0 auto;
+}
+
+.subheading-bot-h2 {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.subheading-bot-h3 {
+    font-size: 1.3rem;
+    color: hsla(0,0%,100%,.6);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.btn-bot {
+    background-color: #7289da;
+    color: #fff;
+    font-size: 1.4rem;
+    max-width: 114px;
+    margin: 0;
+    line-height: 0;
+}
 
 /* Media Queries */
 
@@ -643,16 +751,23 @@ html, body {
         margin: 0;
         padding: 0;
     }
+    .divider-responsive {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .subheading-h2 {
         max-width: 420px;
         text-align: center;
     }
     .page-nitro {
-        min-width: 868px;
+        min-width: 830px;
+    }
+    .bot-content {
+        padding-left: 40px;
     }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 848px) {
     .nav {
         display:none;
     }
@@ -661,6 +776,33 @@ html, body {
     }
     .page-nitro {
         min-width: 320px;
+    }
+    .footer-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .footer-content-grid {
+        grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+        column-gap: 60px;
+        justify-items: center;
+        text-align: center;
+    }
+    .footer-logo {
+        height: 46px;
+        width: 46px;
+    }
+    .subheading-bot-h2, .subheading-bot-h3 {
+        text-align: center;
+    }
+    .btn-bot {
+        align-self: center;
+        margin-top: 16px;
+        background-color: #fff;
+        color: #7289da;
+        padding: 16px;
+    }
+    .footer-content-bot {
+        flex-direction: column;
     }
 }
 

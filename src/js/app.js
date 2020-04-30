@@ -19,20 +19,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-//  Mobile nav menu uncheck menu checkboxes
+  //  Mobile nav menu uncheck menu checkboxes
 
   const dropdown_toggle = document.querySelectorAll('.mobile-dropdown-toggle');
 
   dropdown_toggle.forEach((item) => {
     item.addEventListener('click', function () {
 
-      if(item.checked === true){
-        dropdown_toggle.forEach( (item2) => {
-          item2.checked = false;
-        });
-        item.checked = true;
-      }
+      const checked_toggle = document.querySelectorAll('.mobile-dropdown-toggle:checked');
 
+      checked_toggle.forEach( toggle => toggle.checked = toggle === item);
     });
   });
-});
+ });
