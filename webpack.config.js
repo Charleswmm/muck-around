@@ -32,7 +32,7 @@ module.exports = {
         use: {
           loader: 'svg-url-loader',
           options: {
-            limit: 4000,
+            limit: 10000,
           },
         },
       },
