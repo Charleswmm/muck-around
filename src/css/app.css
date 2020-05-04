@@ -43,7 +43,7 @@ html, body {
 }
 
 .nav-mobile-logo {
-    background-image: url("../assets/dis-logo.svg");
+    background-image: url("../img/dis-logo.svg");
     height: 24px;
     width: 22px;
     position: relative;
@@ -51,7 +51,7 @@ html, body {
 }
 
 .nav-mobile-discord {
-    background-image: url("../assets/discord.svg");
+    background-image: url("../img/discord.svg");
     height: 24px;
     width: 80px;
     position: relative;
@@ -186,7 +186,7 @@ html, body {
 
 .drop-arrow::after {
     content: '';
-    background-image: url("../assets/arrow.svg");
+    background-image: url("../img/arrow.svg");
     height: 5px;
     width: 7px;
     background-repeat: no-repeat;
@@ -361,38 +361,38 @@ html, body {
 }
 
 .svg-logo {
-    background-image: url("../assets/dis-logo.svg");
+    background-image: url("../img/dis-logo.svg");
     height: 36px;
     width:33px;
 }
 
 .svg-discord {
-    background-image: url("../assets/discord.svg");
+    background-image: url("../img/discord.svg");
     height: 36px;
     width: 98px;
     margin-right: 12px;
 }
 
 .svg-twitter {
-    background-image: url("../assets/twitter.svg");
+    background-image: url("../img/twitter.svg");
     height: 16px;
     width: 16px;
 }
 
 .svg-facebook {
-    background-image: url("../assets/facebook.svg");
+    background-image: url("../img/facebook.svg");
     height: 16px;
     width: 16px;
 }
 
 .svg-instagram {
-    background-image: url("../assets/instagram.svg");
+    background-image: url("../img/instagram.svg");
     height: 16px;
     width: 16px;
 }
 
 .svg-arrow {
-    background-image: url("../assets/arrow.svg");
+    background-image: url("../img/arrow.svg");
     height: 5px;
     width: 7px;
     margin-bottom: 1px;
@@ -400,7 +400,7 @@ html, body {
 }
 
 .svg-locale {
-    background-image: url("../assets/locale.svg");
+    background-image: url("../img/locale.svg");
     height: 20px;
     width: 22px;
 }
@@ -436,7 +436,7 @@ html, body {
 }
 
 .svg-discord-big {
-    background-image: url("../assets/discord.svg");
+    background-image: url("../img/discord.svg");
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -447,7 +447,7 @@ html, body {
 }
 
 .svg-nitro-big {
-    background-image: url("../assets/nitro-s.svg");
+    background-image: url("../img/nitro-s.svg");
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -519,7 +519,7 @@ html, body {
 }
 
 .wave {
-    background-image: url("../assets/wave.svg");
+    background-image: url("../img/wave.svg");
     background-repeat: no-repeat;
     background-size: 102%;
     width: 100%;
@@ -530,35 +530,35 @@ html, body {
 }
 
 .hash-svg {
-    background-image: url("../assets/hash.svg");
+    background-image: url("../img/hash.svg");
 }
 
 .gif-svg {
-    background-image: url("../assets/gif.svg");
+    background-image: url("../img/gif.svg");
 }
 
 .stream-svg {
-    background-image: url("../assets/comp.svg");
+    background-image: url("../img/comp.svg");
 }
 
 .vid-svg {
-    background-image: url("../assets/screen.svg");
+    background-image: url("../img/screen.svg");
 }
 
 .globe-svg {
-    background-image: url("../assets/globe.svg");
+    background-image: url("../img/globe.svg");
 }
 
 .up-svg {
-    background-image: url("../assets/up.svg");
+    background-image: url("../img/up.svg");
 }
 
 .diamond-svg {
-    background-image: url("../assets/diamond.svg");
+    background-image: url("../img/diamond.svg");
 }
 
 .wheel-svg {
-    background-image: url("../assets/wheel.svg");
+    background-image: url("../img/wheel.svg");
 }
 
 .mid {
@@ -637,7 +637,7 @@ html, body {
 }
 
 .svg-discord-classic {
-    background-image: url("../assets/dis-classic.svg");
+    background-image: url("../img/dis-classic.svg");
     background-repeat: no-repeat;
     background-size: contain;
     height: 109px;
@@ -700,7 +700,7 @@ html, body {
 }
 
 .footer-logo {
-    background-image: url("../assets/dis-logo.svg");
+    background-image: url("../img/dis-logo.svg");
     height: 100%;
     width: 31px;
     margin-top: 0.4rem;
